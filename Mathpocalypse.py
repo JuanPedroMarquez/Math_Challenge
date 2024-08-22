@@ -38,16 +38,16 @@ def generate_problem():
 
 # SARTING THE TEST
 wrong_exercises = 0 # Variable to store the number of wrong exercises
-input("Press any key to start the trial!") # Wait for the user to press any key
+input("Press any key to start the trial! You may use paper and pen if you want") # Wait for the user to press any key
 print()
-print("------------Good luck!------------") 
+print("------------ Good luck! ------------") 
 print()
 start_time = time.time() # Start the timer
 
 for i in range(number_of_problems): # Loop to generate as many numbers as indicated in the parameters of the test
     expression, answer = generate_problem() # Call the function to generate a problem
     while True: # While the answer is not correct, keep asking the same question
-        attempt = input("Problem number " + str(i+1) + ": How much " + expression + " is? Answer: ") # Print the question and wait for the user to input the answer
+        attempt = input("Problem number " + str(i+1) + ": How much is " + expression + " ? Answer: ") # Print the question and wait for the user to input the answer
         if attempt == str(answer): # If the answer is correct, break the while loop and generate next problem
             break
         else: # In bad attempts, the wrong exercises counter is increased by 1
@@ -57,7 +57,7 @@ end_time = time.time() # Stop the timer
 test_time = end_time - start_time # Calculate the time spent to solve the problems as the differences between the finish and the start
 
 print()
-print("------------Finished!------------")
+print("------------ Finished! ------------")
 print()
 
 # FINAL RESULTS
